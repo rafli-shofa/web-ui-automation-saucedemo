@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-14T03:22:25.529Z",
+    "end": "2026-02-14T03:22:30.065Z",
+    "duration": 4536,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a40d12ad-8429-4e26-9709-be7112c69c53",
+      "title": "",
+      "fullFile": "D:\\Muh Rafli Shofa _ Tugas Project Mini Bootcamp QA Engineer Digital Skola\\Sesi 9 _ Web UI Automation Fundamental\\test\\saucedemo.test.js",
+      "file": "\\test\\saucedemo.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d7b75bb0-98dd-4153-96bb-e730420ea413",
+          "title": "SauceDemo Automation Test",
+          "fullFile": "D:\\Muh Rafli Shofa _ Tugas Project Mini Bootcamp QA Engineer Digital Skola\\Sesi 9 _ Web UI Automation Fundamental\\test\\saucedemo.test.js",
+          "file": "\\test\\saucedemo.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"SauceDemo Automation Test\"",
+              "fullTitle": "SauceDemo Automation Test \"before all\" hook in \"SauceDemo Automation Test\"",
+              "timedOut": false,
+              "duration": 910,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder()\n    .forBrowser('chrome')\n    .build();",
+              "err": {},
+              "uuid": "8493991b-293a-4953-8dd3-59becf27d1f8",
+              "parentUUID": "d7b75bb0-98dd-4153-96bb-e730420ea413",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"SauceDemo Automation Test\"",
+              "fullTitle": "SauceDemo Automation Test \"after all\" hook in \"SauceDemo Automation Test\"",
+              "timedOut": false,
+              "duration": 137,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) {\n    await driver.quit();\n}",
+              "err": {},
+              "uuid": "59b2294a-9bb5-4b49-add6-f06d792045f6",
+              "parentUUID": "d7b75bb0-98dd-4153-96bb-e730420ea413",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Sukses Login ke SauceDemo",
+              "fullTitle": "SauceDemo Automation Test Sukses Login ke SauceDemo",
+              "timedOut": false,
+              "duration": 1262,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('https://www.saucedemo.com');\nconst title = await driver.getTitle();\nassert.strictEqual(title, 'Swag Labs');\nawait driver.findElement(By.css('[data-test=\"username\"]'))\n    .sendKeys('standard_user');\nawait driver.findElement(By.css('[data-test=\"password\"]'))\n    .sendKeys('secret_sauce');\nawait driver.findElement(By.id('login-button')).click();\nconst cart = await driver.wait(\n    until.elementLocated(By.className('shopping_cart_link')),\n    10000\n);\nassert.ok(cart);",
+              "err": {},
+              "uuid": "b2d6fdea-b42f-4e57-9213-39bc95651285",
+              "parentUUID": "d7b75bb0-98dd-4153-96bb-e730420ea413",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Urutkan Produk dari A ke Z",
+              "fullTitle": "SauceDemo Automation Test Urutkan Produk dari A ke Z",
+              "timedOut": false,
+              "duration": 2217,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const dropdown = await driver.findElement(\n    By.css('[data-test=\"product-sort-container\"]')\n);\nawait dropdown.click();\nawait dropdown.findElement(\n    By.css('option[value=\"az\"]')\n).click();\nawait driver.sleep(2000);",
+              "err": {},
+              "uuid": "a6cab668-9d3e-4bce-b75d-5d1c1995076f",
+              "parentUUID": "d7b75bb0-98dd-4153-96bb-e730420ea413",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b2d6fdea-b42f-4e57-9213-39bc95651285",
+            "a6cab668-9d3e-4bce-b75d-5d1c1995076f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3479,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 60000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.5"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "index",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "report",
+        "reportFilename": "index",
+        "html": "true",
+        "json": "true"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

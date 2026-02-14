@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --timeout 60000"
+    "test": "mocha test --timeout 60000 --reporter mochawesome --reporter-options reportDir=report,reportFilename=index,html=true,json=true"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +13,8 @@
     "chromedriver": "^145.0.2",
     "mocha": "^11.7.5",
     "selenium-webdriver": "^4.40.0"
+  },
+  "devDependencies": {
+    "mochawesome": "^7.1.4"
   }
 }
